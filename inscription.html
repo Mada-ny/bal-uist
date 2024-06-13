@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="css/formulaire.css" />
+    <link rel="stylesheet" href="css/feuille.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>Inscription</h1>
+    <h2>
+      Assurez-vous que les informations entrées soient les plus précises
+      possibles.<br />
+      Il est impossible de revenir en arrière une fois celles-ci validées.
+    </h2>
+    <div id="overlay"></div>
+    <div class="corps">
+      <div class="formulaire" name="formulaire">
+        <h2>
+          Une fois le formulaire complètement rempli, veuillez-vous diriger vers
+          le bas de la page afin d'obtenir votre code QR.
+        </h2>
+        <form
+          method="POST"
+          action="https://submit-form.com/eIdVuxO6v"
+          name="form1"
+        >
+          <div class="titre-input1">
+            <p class="titre">Nom</p>
+            <input
+              type="text"
+              name="Nom"
+              oninput="change(this)"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="titre-input1">
+            <p class="titre">Prenom</p>
+            <input
+              type="text"
+              name="Prenom"
+              class="form-control"
+              oninput="change(this)"
+              required
+            />
+          </div>
+
+          <div class="titre-input1">
+            <p class="titre">Email</p>
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              oninput="change(this)"
+              placeholder="Ex : vous@gmail.com"
+              pattern="(^[a-z0-9]+)@([a-z0-9])+(\.)([a-z]{2,4})"
+              required
+            />
+          </div>
+
+          <div class="titre-input1">
+            <p class="titre">Numero</p>
+            <input
+              type="tel"
+              pattern="^[0-9]{10}"
+              class="form-control"
+              oninput="change(this)"
+              name="Numero"
+              required
+            />
+          </div>
+
+          <p class="titre titre-paiement">Paiement</p>
+          <div class="paiement">
+            <label for="Paiement" class="titre">Orange Money</label>
+            <input
+              type="radio"
+              value="OM"
+              name="Paiement"
+              oninput="change(this)"
+              class="form-control"
+              required
+            />
+            <label for="Paiement" class="titre">MTN Money</label>
+            <input
+              type="radio"
+              value="MoMo"
+              name="Paiement"
+              class="form-control"
+              oninput="change(this)"
+              required
+            />
+            <label for="Paiement" class="titre">Moov Money</label>
+            <input
+              type="radio"
+              value="Moov Money"
+              name="Paiement"
+              class="form-control"
+              oninput="change(this)"
+              required
+            />
+          </div>
+          <div class="buttons">
+            <button type="submit" class="btn--primary" onclick="Popup()">
+              Valider
+            </button>
+            <button type="reset" class="btn--primary">Effacer</button>
+            <button type="button" class="btn btn-secondary" onclick="goBack()">
+              Retour au site
+            </button>
+          </div>
+          <h2>
+            <span id="red">
+              Enregistrez le code QR avant de cliquer sur le bouton Valider!
+            </span>
+          </h2>
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nouveau formulaire soumis"
+          />
+          <input type="hidden" name="_template" value="clean" />
+        </form>
+      </div>
+      <!-- on commence a partir d'ici -->
+    </div>
+
+    <div class="code_qr">
+      <h2>Votre code QR</h2>
+      <img class="qrious" />
+
+      <div class="information">
+        <h4>
+          Veuilez conserver précieusement ce code QR à l'intérieur de votre
+          appareil. <br />
+          Ce dernier fera office de ticket d'entrée et vous permettra d'avoir
+          accès aux lieux.
+        </h4>
+      </div>
+    </div>
+
+    <script src="js/qrious.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

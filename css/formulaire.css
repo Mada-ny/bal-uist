@@ -1,0 +1,249 @@
+@import url("font-awesome/css/font-awesome.min.css");
+@import url("micons/micons.css");
+@import url("fonts.css");
+
+html {
+  font-size: 10px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "muli-regular", sans-serif;
+  background-image: url("/images/logo_bureau_uist.png");
+  background-size: 750px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Couleur blanche semi-transparente */
+  z-index: -1; /* Placez l'overlay derrière le contenu */
+}
+
+.formulaire {
+  width: 450px;
+  margin: auto;
+  border: 1px solid #ffd100;
+  padding: 15px;
+}
+.titre {
+  color: #12100e;
+  font-weight: bolder;
+}
+input {
+  border-radius: 5px;
+  border: 1px solid #12100e;
+  height: 30px;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+h2 {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.input-nom-prenom {
+  display: flex;
+}
+.titre-input1 {
+  width: 50%;
+  max-width: 500px; /* Ajuster cette valeur selon vos besoins */
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  color: #12100e;
+}
+.titre-input {
+  padding-right: 20px;
+}
+.titre-paiement {
+  padding: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.paiement {
+  display: flex;
+  max-width: 500px; /* Ajuster cette valeur selon vos besoins */
+  padding: 0.8rem;
+  font-size: 1.5rem;
+}
+.paiement input {
+  width: 15px;
+  margin-top: -8px;
+  margin-right: 20px;
+  border: 1px solid;
+}
+
+.input-type-submit {
+  background-color: green;
+  color: whitesmoke;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 15px;
+}
+.ensemble_envoyer_reset {
+  display: flex;
+}
+
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  color: #12100e;
+  border-color: #12100e;
+}
+
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+  border-color: #ffd100;
+  -webkit-box-shadow: 0 0 6px #d8b000;
+  -moz-box-shadow: 0 0 6px #d8b000;
+  box-shadow: 0 0 6px #d8b000;
+}
+
+.invalid-feedback {
+  display: none;
+}
+input:invalid .invalid-feedback {
+  display: inline-block;
+}
+input:valid {
+  border-color: #ffd100;
+}
+.Affichage {
+  padding: 5px;
+}
+.Affichage .titre {
+  font-size: 30px;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  font-family: "montserrat-regular", sans-serif;
+  font-size: 1.5rem;
+  height: 4rem;
+  line-height: calc(4rem - 0.6rem);
+  padding: 0 3rem;
+  margin: 0 0.9rem 1.2rem 0;
+  color: #222222;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffd100;
+  border: 0.3rem solid #ffd100;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  background-color: #dcb715;
+  border-color: #dcb715;
+  color: #ffffff;
+  outline: 0;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  background-color: #ffd100;
+  border-color: #ffd100;
+  color: #12100e;
+}
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  background: #dcb715;
+  border-color: #dcb715;
+  color: #ffffff;
+}
+
+button.full-width,
+.button.full-width {
+  width: 100%;
+  margin-right: 0;
+}
+
+button.medium,
+.button.medium {
+  height: 5.7rem !important;
+  line-height: calc(5.7rem - 0.6rem) !important;
+}
+
+button.large,
+.button.large {
+  height: 6rem !important;
+  line-height: calc(6rem - 0.6rem) !important;
+}
+
+button.stroke,
+.button.stroke {
+  background: transparent !important;
+  color: #a5a5a5 !important;
+}
+
+button.stroke:hover,
+.button.stroke:hover {
+  border: 0.3rem solid #ffd100;
+  color: #ffd100;
+}
+
+button.pill,
+.button.pill {
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+  border-radius: 1000px;
+}
+
+#red {
+  color: red;
+  font-weight: bolder;
+}

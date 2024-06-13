@@ -1,0 +1,15 @@
+.corps {
+  display: flex;
+}
+.formulaire {
+  margin-left: auto;
+}
+.code_qr {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  margin-top: 75px;
+  width: 250px;
+  max-width: 250px;
+}
